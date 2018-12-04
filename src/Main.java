@@ -1,11 +1,13 @@
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-        Hello hello = new Hello();
-        hello.sayHello();
+        Random random = new Random();
+        for(int i=0;i<100;i++) {
+            int randomNumber = random.nextInt(6);
+            System.out.println(randomNumber+1);
+        }
     }
-
-
 }
-
 
