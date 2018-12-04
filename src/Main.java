@@ -1,13 +1,18 @@
-import java.util.Random;
-
 public class Main {
 
+    public void changeValue(A val) {
+        val.x = 10;
+    }
+
     public static void main(String[] args) {
-        Random random = new Random();
-        for(int i=0;i<100;i++) {
-            int randomNumber = random.nextInt(6);
-            System.out.println(randomNumber+1);
-        }
+        Main t = new Main();
+        A a = new A();
+        a.x = 5;
+        t.changeValue(a);
+        System.out.println(a.x); // ?
+    }
+
+    static class A{
+        int x;
     }
 }
-
