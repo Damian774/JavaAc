@@ -7,10 +7,9 @@ public class Date {
         this.day =day;
         this.month=month;
         this.year=year;
-
     }
 
-    public void getInfo() {
-        System.out.println("name: "+this.getClass().getName()+" year: "+year+" month: "+month+" day: "+day+"\n");
+    public String getInfo() {
+        return ( "year: "+year+" month: "+month+" day: "+day+"\n");
     }
 }
