@@ -1,6 +1,5 @@
 import java.util.Date;
-import static java.lang.*;
-import static java.lang.Math.PI;
+import static java.lang.Math.*;
 
 public class Main {
 
