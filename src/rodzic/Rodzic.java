@@ -1,9 +1,40 @@
 package rodzic;
 
+import java.util.Objects;
+
 public class Rodzic {
     static{
         System.out.println("static rodzic");
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    public Rodzic(String prywatnePole, String domyslnePole, String publicznePole, String protectedPole) {
+        this.prywatnePole = prywatnePole;
+        this.domyslnePole = domyslnePole;
+        this.publicznePole = publicznePole;
+        this.protectedPole = protectedPole;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rodzic rodzic = (Rodzic) o;
+        return Objects.equals(prywatnePole, rodzic.prywatnePole) &&
+                Objects.equals(domyslnePole, rodzic.domyslnePole) &&
+                Objects.equals(publicznePole, rodzic.publicznePole) &&
+                Objects.equals(protectedPole, rodzic.protectedPole);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(prywatnePole, domyslnePole, publicznePole, protectedPole);
+    }
+
     {
         System.out.println("blok rodzic");
     }

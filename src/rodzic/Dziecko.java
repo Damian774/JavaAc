@@ -15,4 +15,10 @@ public class Dziecko extends Rodzic {
     public Dziecko(){
         System.out.println("dziecko konstruktor");
     }
+    public Dziecko(String s){
+        this();
+        System.out.println(s);
+
+    }
+
 }
