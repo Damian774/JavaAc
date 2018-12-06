@@ -1,7 +1,6 @@
 public class Test {
 
     public static void main(String[] args) {
-
         Vehicle v[] = new Vehicle[4];
         v[0] = new Plane();
         v[1] = new Ship();
