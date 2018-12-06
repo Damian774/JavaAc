@@ -9,7 +9,10 @@ public class Date {
         this.year=year;
     }
 
-    public String getInfo() {
-        return ( "year: "+year+" month: "+month+" day: "+day+"\n");
+    @Override
+    public String toString() {
+        return "year: "+year+" month: "+month+" day: "+day+"\n";
     }
+
+
 }

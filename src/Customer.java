@@ -1,6 +1,12 @@
 public class Customer {
     private String name;
     private Address address;
+
+    @Override
+    public String toString() {
+        return "Client name: "+name+"\nClient Address: "+address.toString()+"\nTrip: "+trip.toString();
+    }
+
     private Trip trip;
 
 
@@ -16,7 +22,5 @@ public class Customer {
         this.trip=trip;
     }
 
-    public String getInfo(){
-        return "Client name: "+name+"\nClient Address: "+address.getInfo()+"\nTrip: "+trip.getInfo();
-    }
+
 }

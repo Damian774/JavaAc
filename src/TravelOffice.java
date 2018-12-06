@@ -3,6 +3,17 @@
 public class TravelOffice {
 
 
+    @Override
+    public String toString() {
+        int count = 1;
+        String info = "Total clients [" + customerCount + "]\n\tClient list: ";
+        for (Customer customer : customerTable) {
+            info += "\n\nClient number [" + count + "]\n\n"+customer.toString();
+            ++count;
+
+        }
+        return info;
+    }
 
     Customer[] customerTable;
 
@@ -31,16 +42,7 @@ public class TravelOffice {
         return customerCount;
     }
 
-    public String getInfo() {
-        int count = 1;
-        String info = "Total clients [" + customerCount + "]\n\tClient list: ";
-        for (Customer customer : customerTable) {
-            info += "\n\nClient number [" + count + "]\n\n"+customer.getInfo();
-            ++count;
 
-        }
-        return info;
-    }
 }
 
 
