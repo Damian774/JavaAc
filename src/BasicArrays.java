@@ -1,6 +1,6 @@
 
 
-public class TravelOffice {
+public class BasicArrays {
 
     public static void main(String[] args) {
         int tab[][] = {{1,2},{3,4},{5,6}};
