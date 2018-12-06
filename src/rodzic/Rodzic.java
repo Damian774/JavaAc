@@ -1,6 +1,17 @@
 package rodzic;
 
 public class Rodzic {
+    static{
+        System.out.println("static rodzic");
+    }
+    {
+        System.out.println("blok rodzic");
+    }
+
+    public Rodzic() {
+        System.out.println("rodzic konstruktor");
+    }
+
     private String prywatnePole;
     String domyslnePole;
     public String publicznePole;
