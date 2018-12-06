@@ -1,7 +1,7 @@
 public class Customer {
-    String name;
-    Address address;
-    Trip trip;
+    private String name;
+    private Address address;
+    private Trip trip;
 
 
     public Customer(String name){

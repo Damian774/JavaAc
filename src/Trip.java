@@ -1,7 +1,7 @@
 public class Trip {
-    Date start;
-    Date end;
-    String destination;
+    private Date start;
+    private Date end;
+    private String destination;
 
     public Trip(Date start,Date end,String destination){
         this.start = start;
