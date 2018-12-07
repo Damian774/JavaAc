@@ -1,7 +1,7 @@
 public class Test {
 
     public static void main(String[] args){
-        Vehicle [] vehicles = {new Ship(), new Train()};
+        Vehicle [] vehicles = {new SmallBoat(), new Train()};
         for(Vehicle v : vehicles){
             v.start();
         }
@@ -21,12 +21,17 @@ abstract class Vehicle{
     void startEngine(){ System.out.println("ENGINE START"); }
 }
 
-class Ship extends Vehicle{
-    @Override
-    void horn() {System.out.println("#### SHIP SIREN SOUND"); }
-}
+abstract class Ship extends Vehicle{ }
 
 class Train extends Vehicle{
     @Override
     void horn() {System.out.println("++++ TRAIN HORN SOUND"); }
 }
+
+class SmallBoat extends Ship{
+
+    @Override
+    void horn() {
+        System.out.println("#### SMALL BOAT HORN SOUND"); }
+    }
+
