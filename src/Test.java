@@ -1,27 +1,44 @@
 public class Test {
 
+    static final String POLE_KLASY_MAIN = "Sam static value";
+    String poleObiektu = "Pole obiektu";
+
+    static String staticTakie (String[] takie){
+        return takie[0];
+
+    }
+    static String returnFirstElementFromTable(String [] table)
+    {return table[0];}
+
     public static void main(String[] args) {
 
-        TravelOffice travelOffice = new TravelOffice();
-
-        Address address = new Address("STREET_NAME", "00-000", "CITY_NAME");
-        Customer customer1 = new Customer("CUSTOMER1_NAME");
-        Customer customer2 = new Customer("CUSTOMER2_NAME");
-
-        customer1.setAddress(address);
-        customer2.setAddress(address);
-
-        DomesticTrip domeseticTrip = new DomesticTrip(new Date(2018, 12, 15), new Date(2019, 1, 14), "DOMESTIC_TRIP_DESTINATION",1000,200);
-        AbroadTrip abroadTrip = new AbroadTrip(new Date(2018, 12, 15), new Date(2019, 1, 14), "ABROAD_TRIP_DESTINATION",1000,100);
-
-        customer1.assignTrip(domeseticTrip);
-        customer2.assignTrip(abroadTrip);
-
-        travelOffice.addCustomer(customer1);
-        travelOffice.addCustomer(customer2);
-
-        System.out.println(travelOffice);
 
 
+        String[] s = {"A","B","C"};
+        args = s;
+
+        Person[] people = {new Person("Ala", "Kowalska", 958482158),
+                new Person("","Nowak", 458218481),
+                null,
+                new Person("Piotr", "", null)};
+
+        for(Person person : people){
+            System.out.println(person.pesel);
+        }
+    }
+
+}
+
+class Person{
+
+    String name;
+    String LastName;
+    Integer pesel;
+
+    public Person(String name, String LastName, Integer pesel){
+
+        this.name = name;
+        this.LastName = LastName;
+        this.pesel = pesel;
     }
 }
