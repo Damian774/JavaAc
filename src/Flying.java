@@ -1,8 +1,14 @@
 public interface Flying {
-    void takeOff();
+ default void takeOff(){
+     System.out.println("<"+this.getClass().getName()+"> taking off");
 
-    void land();
+ }
+default void land(){
+    System.out.println("<"+this.getClass().getName()+"> landing");
+}
+ default void callAirControl(){
+     System.out.println("<"+this.getClass().getName()+"> calling air control");
 
-    void callAirControl();
+ }
 
 }

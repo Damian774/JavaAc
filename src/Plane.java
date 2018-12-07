@@ -15,26 +15,13 @@ public class Plane extends Vehicle implements Flying {
 
     @Override
     public void go() {
-        this.takeOff();
+        super.go();
+        takeOff();
     }
 
     @Override
     public void stop() {
-        this.land();
-    }
-
-    @Override
-    public void takeOff() {
-        System.out.println("<"+this.getClass().getName()+"> taking off");
-    }
-
-    @Override
-    public void land() {
-        System.out.println("<"+this.getClass().getName()+"> landing");
-    }
-
-    @Override
-    public void callAirControl() {
-        System.out.println("<"+this.getClass().getName()+"> calling air control");
+        super.stop();
+        land();
     }
 }

@@ -19,9 +19,4 @@ public class Ship extends Vehicle implements Sailing {
         dock();
     }
 
-    public void dock() {
-        System.out.println("<"+this.getClass().getName()+"> arrived to port");
-    }
-
-
 }

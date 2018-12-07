@@ -1,4 +1,6 @@
 public interface Sailing {
-    public void dock();
+    default void dock(){
+        System.out.println("<"+this.getClass().getName()+"> arrived to port");
+    }
 
 }
