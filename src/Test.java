@@ -11,7 +11,7 @@ public class Test {
         for(Vehicle vehicle: vehicles){
             vehicle.go();
             vehicle.stop();
-            vehicle.calculateFuelConsumption();
+            System.out.println(vehicle.calculateFuelConsumption());
             if(vehicle instanceof Flying) ((Flying) vehicle).callAirControl();
         }
 
