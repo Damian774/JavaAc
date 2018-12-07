@@ -1,21 +1,27 @@
 public class Ship extends Vehicle implements Sailing {
+    public Ship(String name) {
+        super(name);
+    }
+
     @Override
     public double getFuelNeeds() {
-        return super.getFuelNeeds();
+        return 30;
     }
 
     @Override
     public double getDistance() {
-        return super.getDistance();
+        return 100;
     }
 
 
     @Override
     public void stop() {
-        super.stop();
+        dock();
     }
 
     public void dock() {
+        System.out.println("<"+this.getClass().getName()+"> arrived to port");
     }
+
 
 }

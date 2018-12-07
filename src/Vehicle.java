@@ -15,7 +15,7 @@ public abstract class Vehicle {
     }
 
     public void go() {
-        System.out.print("<"+this.getClass().getName()+"> started");
+        System.out.println("<"+this.getClass().getName()+"> started");
     }
 
     public Vehicle(String name) {
@@ -23,6 +23,6 @@ public abstract class Vehicle {
     }
 
     public void stop() {
-        System.out.print("<"+this.getClass().getName()+"> stopped");
+        System.out.println("<"+this.getClass().getName()+"> stopped");
     }
 }
