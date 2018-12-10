@@ -1,45 +1,77 @@
-
+import java.util.*;
 
 public class TravelOffice {
 
+    private Set<Customer> customerSet;
+    private Map<String, Trip> tripMap;
 
     @Override
     public String toString() {
+        StringBuilder info = new StringBuilder("Total clients [" + getCustomerCount() + "]\n\tClient list: ");
         int count = 1;
-        String info = "Total clients [" + customerCount + "]\n\tClient list: ";
-        for (Customer customer : customerTable) {
-            info += "\n\nClient number [" + count + "]\n\n"+customer.toString();
+        for (Customer customer : customerSet) {
+            info.append("\n\nClient number [").append(count).append("]\n\n").append(customer.toString());
             ++count;
 
         }
-        return info;
+        return info.toString();
     }
-
-    Customer[] customerTable;
-
-    private static int customerCount;
 
 
     public TravelOffice() {
-        customerTable = new Customer[2];
-
+        customerSet = new HashSet<>();
+        tripMap = new HashMap<>();
     }
 
     public void addCustomer(Customer customer) {
-        customerCount++;
-        if (customerCount > customerTable.length) {
-            Customer[] customerNewTable = new Customer[customerTable.length+1];
-            System.arraycopy(customerTable, 0, customerNewTable, 0, customerTable.length);
-           customerTable = customerNewTable.clone();
-           customerTable[customerCount-1] = customer;
-        } else {
-            customerTable[customerCount - 1] = customer;
-        }
+        customerSet.add(customer);
 
     }
 
     public int getCustomerCount() {
-        return customerCount;
+        return customerSet.size();
+    }
+
+    void addTrip(String keyName, Trip tripName) {
+        tripMap.put(keyName, tripName);
+    }
+
+    boolean removeTrip(String keyName) {
+        if (tripMap.containsKey(keyName)) {
+            tripMap.remove(keyName);
+            return true;
+        } else return false;
+
+    }
+
+    Customer findCustomerByName(String name) {
+
+        for (Iterator<Customer> i = customerSet.iterator(); i.hasNext(); ) {
+            Customer element = i.next();
+            if (element.getName().equals(name)) {
+                return element;
+            }
+        }
+        return null;
+    }
+
+    boolean removeCustomer(Customer customer) {
+        for (Iterator<Customer> i = customerSet.iterator(); i.hasNext(); ) {
+            Customer element = i.next();
+            if (element.equals(customer)) {
+                i.remove();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    Set<Customer> getAllCustomers(){
+        return customerSet;
+    }
+
+    Map<String,Trip> getAllTrips(){
+        return tripMap;
     }
 
 

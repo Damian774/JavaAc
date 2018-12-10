@@ -7,6 +7,10 @@ public class Customer {
         return "Client name: "+name+"\nClient Address: "+address.toString()+"\nTrip: "+trip.toString();
     }
 
+    public String getName() {
+        return name;
+    }
+
     private Trip trip;
 
 
